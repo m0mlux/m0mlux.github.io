@@ -35,60 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Language selector
-  const languageOptions = document.querySelectorAll(".language-options span")
-
-  languageOptions.forEach((option) => {
-    option.addEventListener("click", () => {
-      languageOptions.forEach((opt) => opt.classList.remove("active"))
-      option.classList.add("active")
-      localStorage.setItem("language", option.dataset.lang)
-      // Here you would typically handle language change
-      // For now, we'll just save the preference
-    })
-  })
-
-  // Check for saved language preference
-  const savedLanguage = localStorage.getItem("language")
-  if (savedLanguage) {
-    languageOptions.forEach((option) => {
-      if (option.dataset.lang === savedLanguage) {
-        option.classList.add("active")
-      } else {
-        option.classList.remove("active")
-      }
-    })
-  }
-
-  // Skills slider navigation
-  const skillsSlider = document.querySelector(".skills-slider")
-  const prevBtn = document.querySelector(".slider-prev")
-  const nextBtn = document.querySelector(".slider-next")
-
-  if (skillsSlider && prevBtn && nextBtn) {
-    const cardWidth = 280 + 24 // card width + gap
-
-    prevBtn.addEventListener("click", () => {
-      skillsSlider.scrollBy({
-        left: -cardWidth * 2,
-        behavior: "smooth",
-      })
-    })
-
-    nextBtn.addEventListener("click", () => {
-      skillsSlider.scrollBy({
-        left: cardWidth * 2,
-        behavior: "smooth",
-      })
-    })
-  }
-
   // Project filtering
   const filterBtns = document.querySelectorAll(".filter-btn")
   const projectCards = document.querySelectorAll(".project-card")
   const projectSearch = document.getElementById("project-search")
 
   if (filterBtns.length && projectCards.length) {
+    // Fonction pour filtrer les projets
+    const filterProjects = () => {
+      const activeFilter = document.querySelector(".filter-btn.active").dataset.filter
+      const searchTerm = projectSearch ? projectSearch.value.toLowerCase() : ""
+
+      projectCards.forEach((card) => {
+        const title = card.querySelector("h3").textContent.toLowerCase()
+        const description = card.querySelector("p").textContent.toLowerCase()
+        const category = card.dataset.category
+
+        const matchesFilter = activeFilter === "all" || category === activeFilter
+        const matchesSearch = !searchTerm || title.includes(searchTerm) || description.includes(searchTerm)
+
+        if (matchesFilter && matchesSearch) {
+          card.style.display = "block"
+        } else {
+          card.style.display = "none"
+        }
+      })
+    }
+
     filterBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         // Remove active class from all buttons
@@ -96,34 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add active class to clicked button
         btn.classList.add("active")
 
-        const filter = btn.dataset.filter
-
-        projectCards.forEach((card) => {
-          if (filter === "all" || card.dataset.category === filter) {
-            card.style.display = "block"
-          } else {
-            card.style.display = "none"
-          }
-        })
+        // Filter projects
+        filterProjects()
       })
     })
-  }
 
-  if (projectSearch) {
-    projectSearch.addEventListener("input", () => {
-      const searchTerm = projectSearch.value.toLowerCase()
-
-      projectCards.forEach((card) => {
-        const title = card.querySelector("h3").textContent.toLowerCase()
-        const description = card.querySelector("p").textContent.toLowerCase()
-
-        if (title.includes(searchTerm) || description.includes(searchTerm)) {
-          card.style.display = "block"
-        } else {
-          card.style.display = "none"
-        }
-      })
-    })
+    if (projectSearch) {
+      projectSearch.addEventListener("input", filterProjects)
+    }
   }
 
   // Shop category selection
@@ -200,6 +153,57 @@ document.addEventListener("DOMContentLoaded", () => {
           top: targetElement.offsetTop - 80,
           behavior: "smooth",
         })
+      }
+    })
+  })
+
+  // Skills slider navigation
+  const skillsSlider = document.querySelector(".skills-slider")
+  const prevBtn = document.querySelector(".slider-prev")
+  const nextBtn = document.querySelector(".slider-next")
+
+  if (skillsSlider && prevBtn && nextBtn) {
+    const cardWidth = 280 + 24 // card width + gap
+
+    prevBtn.addEventListener("click", () => {
+      skillsSlider.scrollBy({
+        left: -cardWidth * 2,
+        behavior: "smooth",
+      })
+    })
+
+    nextBtn.addEventListener("click", () => {
+      skillsSlider.scrollBy({
+        left: cardWidth * 2,
+        behavior: "smooth",
+      })
+    })
+  }
+
+  // Language selector with page redirection
+  const languageOptions = document.querySelectorAll(".language-options span")
+
+  languageOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      const lang = option.dataset.lang
+      const currentPage = window.location.pathname.split("/").pop()
+
+      // Save language preference
+      localStorage.setItem("language", lang)
+
+      // Redirect to the appropriate language version
+      if (lang === "en" && !currentPage.includes("-en")) {
+        // Get the base name without extension
+        const baseName = currentPage.replace(".html", "")
+        if (baseName === "index") {
+          window.location.href = "index-en.html"
+        } else {
+          window.location.href = `${baseName}-en.html`
+        }
+      } else if (lang === "fr" && currentPage.includes("-en")) {
+        // Remove the -en suffix
+        const frPage = currentPage.replace("-en.html", ".html")
+        window.location.href = frPage
       }
     })
   })
