@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets | M0mlux</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-theme.css" id="theme-style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <div id="particles-js"></div>
+  
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <span class="language-options">
+            <span class="active" data-lang="fr">FR</span> | 
+            <span data-lang="en">EN</span>
+          </span>
+        </div>
+      </div>
+      
+      <div class="logo">M0MLUX</div>
+      
+      <div class="header-right">
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle-checkbox" checked>
+            <label for="theme-toggle-checkbox"></label>
+          </div>
+          <i class="fas fa-moon"></i>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="projects.html" class="active"><i class="fas fa-code-branch"></i> Projets</a></li>
+            <li><a href="shop.html"><i class="fas fa-shopping-cart"></i> Boutique</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="projects-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1>Mes Projets</h1>
+          <div class="separator"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-filter">
+      <div class="container">
+        <div class="filter-container">
+          <div class="filter-label">Filtrer par:</div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="desktop">Desktop</button>
+            <button class="filter-btn" data-filter="ai">IA & Bots</button>
+          </div>
+          <div class="search-container">
+            <input type="text" id="project-search" placeholder="Rechercher un projet...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-list">
+      <div class="container">
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-globe"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Site E-commerce</h3>
+              <p>Plateforme de commerce électronique complète avec système de paiement intégré et gestion des stocks.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Stripe</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 2 -->
+          <div class="project-card" data-category="mobile">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Application Fitness</h3>
+              <p>Application mobile de suivi d'entraînement avec plans personnalisés et analyses de progression.</p>
+              <div class="project-tags">
+                <span>React Native</span>
+                <span>Firebase</span>
+                <span>Redux</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 3 -->
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-robot"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Bot Discord</h3>
+              <p>Bot Discord multifonctionnel avec modération, musique, et intégrations API diverses.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Discord.py</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 4 -->
+          <div class="project-card" data-category="desktop">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-desktop"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Logiciel de Gestion</h3>
+              <p>Application desktop pour la gestion de projets et le suivi des tâches en entreprise.</p>
+              <div class="project-tags">
+                <span>C#</span>
+                <span>.NET</span>
+                <span>SQL Server</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 5 -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-chart-line"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Dashboard Analytics</h3>
+              <p>Tableau de bord interactif pour visualiser et analyser des données commerciales.</p>
+              <div class="project-tags">
+                <span>Vue.js</span>
+                <span>D3.js</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 6 -->
+          <div class="project-card" data-category="ai">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-brain"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Système de Recommandation</h3>
+              <p>Algorithme d'IA pour recommander des produits basés sur les préférences utilisateur.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 7 -->
+          <div class="project-card" data-category="mobile">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>App de Voyage</h3>
+              <p>Application mobile pour planifier des voyages avec cartes interactives et recommandations.</p>
+              <div class="project-tags">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>Google Maps API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Projet 8 -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <div class="image-placeholder">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Plateforme E-learning</h3>
+              <p>Site web de cours en ligne avec système de progression et certification.</p>
+              <div class="project-tags">
+                <span>Next.js</span>
+                <span>GraphQL</span>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le projet</a>
+                <a href="#" class="btn btn-small btn-outline">Code source</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">M0MLUX</div>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="projects.html">Projets</a>
+          <a href="shop.html">Boutique</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>&copy; 2024 M0mlux. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

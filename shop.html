@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique | M0mlux</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-theme.css" id="theme-style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <div id="particles-js"></div>
+  
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <span class="language-options">
+            <span class="active" data-lang="fr">FR</span> | 
+            <span data-lang="en">EN</span>
+          </span>
+        </div>
+      </div>
+      
+      <div class="logo">M0MLUX</div>
+      
+      <div class="header-right">
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle-checkbox" checked>
+            <label for="theme-toggle-checkbox"></label>
+          </div>
+          <i class="fas fa-moon"></i>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projets</a></li>
+            <li><a href="shop.html" class="active"><i class="fas fa-shopping-cart"></i> Boutique</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1>Boutique</h1>
+          <div class="separator"></div>
+          <p class="subtitle">Découvrez mes produits et services numériques</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-categories">
+      <div class="container">
+        <div class="categories-grid">
+          <div class="category-card active">
+            <i class="fas fa-code"></i>
+            <h3>Templates</h3>
+          </div>
+          <div class="category-card">
+            <i class="fas fa-book"></i>
+            <h3>E-books</h3>
+          </div>
+          <div class="category-card">
+            <i class="fas fa-plug"></i>
+            <h3>Plugins</h3>
+          </div>
+          <div class="category-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Cours</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-products">
+      <div class="container">
+        <div class="products-grid">
+          <!-- Produit 1 -->
+          <div class="product-card">
+            <div class="product-badge">Populaire</div>
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Template Portfolio Pro</h3>
+              <p>Template responsive pour portfolio de développeur avec animations avancées.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(42)</span>
+                </div>
+                <div class="product-price">29,99 €</div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+          
+          <!-- Produit 2 -->
+          <div class="product-card">
+            <div class="product-badge">Nouveau</div>
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-store"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>E-commerce Starter Kit</h3>
+              <p>Kit complet pour démarrer rapidement une boutique en ligne professionnelle.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(18)</span>
+                </div>
+                <div class="product-price">49,99 €</div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+          
+          <!-- Produit 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-book"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Guide JavaScript Avancé</h3>
+              <p>E-book complet sur les concepts avancés de JavaScript et les bonnes pratiques.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(35)</span>
+                </div>
+                <div class="product-price">19,99 €</div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+          
+          <!-- Produit 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-puzzle-piece"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Plugin SEO WordPress</h3>
+              <p>Plugin optimisé pour améliorer le référencement de votre site WordPress.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(27)</span>
+                </div>
+                <div class="product-price">24,99 €</div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+          
+          <!-- Produit 5 -->
+          <div class="product-card">
+            <div class="product-badge">Promo</div>
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Cours React Complet</h3>
+              <p>Formation complète sur React avec projets pratiques et certification.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(56)</span>
+                </div>
+                <div class="product-price">
+                  <span class="old-price">89,99 €</span>
+                  59,99 €
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+          
+          <!-- Produit 6 -->
+          <div class="product-card">
+            <div class="product-image">
+              <div class="image-placeholder">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+            </div>
+            <div class="product-content">
+              <h3>Kit UI Dark Mode</h3>
+              <p>Collection de composants UI en mode sombre pour applications web modernes.</p>
+              <div class="product-meta">
+                <div class="product-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span>(22)</span>
+                </div>
+                <div class="product-price">34,99 €</div>
+              </div>
+              <a href="#" class="btn btn-primary btn-block">Ajouter au panier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">M0MLUX</div>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="projects.html">Projets</a>
+          <a href="shop.html">Boutique</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>&copy; 2024 M0mlux. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

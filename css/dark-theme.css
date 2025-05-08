@@ -1,0 +1,72 @@
+/* Dark Theme Styles */
+body.dark-theme {
+  --primary: #00e5ff;
+  --primary-dark: #0085ff;
+  --secondary: #6c00ff;
+  --dark: #0a0a0a;
+  --darker: #050505;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+  --primary: #0085ff;
+  --primary-dark: #0056b3;
+  --secondary: #6c00ff;
+  --dark: #f8f9fa;
+  --darker: #e9ecef;
+  --light: #212529;
+  --gray: #495057;
+}
+
+body.light-theme {
+  background-color: var(--darker);
+  color: var(--light);
+}
+
+body.light-theme header {
+  background-color: rgba(248, 249, 250, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .theme-toggle i:first-child {
+  color: var(--primary);
+}
+
+body.light-theme .theme-toggle i:last-child {
+  color: var(--gray);
+}
+
+body.light-theme .skill-card,
+body.light-theme .project-card,
+body.light-theme .value-card,
+body.light-theme .filter-container,
+body.light-theme .category-card,
+body.light-theme .product-card,
+body.light-theme .form-card,
+body.light-theme .faq-item,
+body.light-theme footer,
+body.light-theme .social-link {
+  background-color: var(--dark);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .image-placeholder {
+  background: linear-gradient(135deg, var(--dark) 0%, rgba(248, 249, 250, 0.8) 100%);
+}
+
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--light);
+}
+
+body.light-theme .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .footer-content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}

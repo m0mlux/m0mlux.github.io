@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | M0mlux</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-theme.css" id="theme-style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+  <div id="particles-js"></div>
+  
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <span class="language-options">
+            <span class="active" data-lang="fr">FR</span> | 
+            <span data-lang="en">EN</span>
+          </span>
+        </div>
+      </div>
+      
+      <div class="logo">M0MLUX</div>
+      
+      <div class="header-right">
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle-checkbox" checked>
+            <label for="theme-toggle-checkbox"></label>
+          </div>
+          <i class="fas fa-moon"></i>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projets</a></li>
+            <li><a href="shop.html"><i class="fas fa-shopping-cart"></i> Boutique</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <div class="section-header">
+          <h1>Contact</h1>
+          <div class="separator"></div>
+          <p class="subtitle">N'hésitez pas à me contacter pour discuter de vos projets</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Restons en contact</h2>
+            <p>Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>email@example.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Localisation</h3>
+                  <p>France</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h3>Disponibilité</h3>
+                  <p>Lun-Ven: 9h-18h</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links-large">
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <div class="form-card">
+              <h2>Envoyez-moi un message</h2>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Sujet</label>
+                  <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Questions fréquentes</h2>
+          <div class="separator"></div>
+        </div>
+        
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Quels services proposez-vous ?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Je propose des services de développement web, création d'applications mobiles, développement de bots Discord, et conseil en technologies numériques.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Comment se déroule un projet ?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Chaque projet commence par une phase de discussion pour comprendre vos besoins, suivie d'une proposition détaillée. Après validation, le développement commence avec des points réguliers pour assurer que le projet répond à vos attentes.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Quels sont vos délais de réalisation ?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Les délais varient selon la complexité du projet. Un site vitrine simple peut prendre 2-3 semaines, tandis qu'une application complète peut nécessiter 2-3 mois. Je vous fournirai toujours une estimation précise avant de commencer.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Proposez-vous un support après-vente ?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Oui, tous mes projets incluent une période de support après livraison. Des contrats de maintenance sont également disponibles pour un support à plus long terme.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">M0MLUX</div>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="projects.html">Projets</a>
+          <a href="shop.html">Boutique</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>&copy; 2024 M0mlux. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

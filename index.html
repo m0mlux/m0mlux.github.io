@@ -4,28 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M0mlux | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-theme.css" id="theme-style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="noise"></div>
-  <div class="gradient-bg"></div>
+<body class="dark-theme">
+  <div id="particles-js"></div>
   
   <header>
     <div class="container">
+      <div class="header-left">
+        <div class="language-selector">
+          <i class="fas fa-globe"></i>
+          <span class="language-options">
+            <span class="active" data-lang="fr">FR</span> | 
+            <span data-lang="en">EN</span>
+          </span>
+        </div>
+      </div>
+      
       <div class="logo">M0MLUX</div>
-      <nav>
-        <ul>
-          <li><a href="#home" class="active">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      
+      <div class="header-right">
+        <div class="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <div class="toggle-switch">
+            <input type="checkbox" id="theme-toggle-checkbox" checked>
+            <label for="theme-toggle-checkbox"></label>
+          </div>
+          <i class="fas fa-moon"></i>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projets</a></li>
+            <li><a href="shop.html"><i class="fas fa-shopping-cart"></i> Boutique</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -36,8 +62,8 @@
           <h1 class="glitch" data-text="Développeur & Créateur">Développeur & Créateur</h1>
           <p class="subtitle">Transformant des idées en expériences numériques exceptionnelles</p>
           <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Me contacter</a>
-            <a href="#projects" class="btn btn-secondary">Voir mes projets</a>
+            <a href="contact.html" class="btn btn-primary">Me contacter</a>
+            <a href="projects.html" class="btn btn-secondary">Voir mes projets</a>
           </div>
         </div>
         <div class="hero-image">
@@ -51,120 +77,139 @@
       </div>
     </section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-header">
-          <h2>À propos de moi</h2>
-          <div class="separator"></div>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p>Passionné par le développement et la création numérique, je m'efforce de créer des solutions innovantes et des expériences utilisateur exceptionnelles.</p>
-            <p>Mon parcours m'a permis d'acquérir des compétences diverses dans le développement web, la gestion de projets et la création de contenu.</p>
-            <div class="stats">
-              <div class="stat-item">
-                <span class="stat-number">3+</span>
-                <span class="stat-label">Années d'expérience</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">20+</span>
-                <span class="stat-label">Projets réalisés</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">Technologies maîtrisées</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-image">
-            <div class="image-container">
-              <div class="image-placeholder">
-                <i class="fas fa-code"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="skills" class="skills">
       <div class="container">
         <div class="section-header">
           <h2>Mes compétences</h2>
           <div class="separator"></div>
         </div>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/44646-developer-ui1Sl5ib8q8e02FkxSoqiWEN0FMbqN.png" alt="Développement">
+        <div class="skills-slider-container">
+          <button class="slider-arrow slider-prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="skills-slider">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/44646-developer-ui1Sl5ib8q8e02FkxSoqiWEN0FMbqN.png" alt="Développement">
+              </div>
+              <h3>Développement</h3>
+              <p>Création d'applications web modernes et performantes</p>
             </div>
-            <h3>Développement</h3>
-            <p>Création d'applications web modernes et performantes</p>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19999-moderator-zdEVCZEp5bH8zTzjr6r3Q20S9M4rE7.png" alt="Sécurité">
+              </div>
+              <h3>Sécurité</h3>
+              <p>Protection et sécurisation des applications et données</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/48746-discorddev-3d0zfmfhLOFW3GQPmewelqzGtMfzJI.png" alt="DevOps">
+              </div>
+              <h3>DevOps</h3>
+              <p>Automatisation et optimisation des processus de développement</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/77597-tester-aKISTYJ1GwsQvaDjFNFGrvK7fkffvc.png" alt="Testing">
+              </div>
+              <h3>Testing</h3>
+              <p>Tests et assurance qualité pour des applications robustes</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/78599-management-9q00bWhgCBNM8q0i6f69Z6n5E8xkNq.png" alt="Gestion">
+              </div>
+              <h3>Gestion</h3>
+              <p>Coordination et gestion efficace des projets numériques</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/97020-owner-pXCGdRVse9F7ueqOeDd5ZGE5eu3r58.png" alt="Leadership">
+              </div>
+              <h3>Leadership</h3>
+              <p>Direction d'équipes et prise de décisions stratégiques</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/93084-booosters-ar9vfwtC8HONpZudHcs0KmoXHTHiDt.png" alt="Innovation">
+              </div>
+              <h3>Innovation</h3>
+              <p>Développement de solutions créatives et avant-gardistes</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/91974-bot-eFPQmMEmJul09J6hoIpdX3AJdndWFh.png" alt="Bots">
+              </div>
+              <h3>Bots & IA</h3>
+              <p>Création de bots et intégration de solutions d'IA</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14911-creator-Cu4hvmvi0HNCwS8Qz4jNbprO64eMki.png" alt="Création">
+              </div>
+              <h3>Création</h3>
+              <p>Production de contenu numérique engageant et professionnel</p>
+            </div>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/19999-moderator-zdEVCZEp5bH8zTzjr6r3Q20S9M4rE7.png" alt="Sécurité">
-            </div>
-            <h3>Sécurité</h3>
-            <p>Protection et sécurisation des applications et données</p>
+          <button class="slider-arrow slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="toolkit" class="toolkit">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mon Toolkit</h2>
+          <div class="separator"></div>
+        </div>
+        <div class="toolkit-grid">
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1887_python-LBnmEUKdzzVgW6cSbUGS38Bg3XZljz.png" alt="Python">
+            <span>Python</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/48746-discorddev-3d0zfmfhLOFW3GQPmewelqzGtMfzJI.png" alt="DevOps">
-            </div>
-            <h3>DevOps</h3>
-            <p>Automatisation et optimisation des processus de développement</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4744_arch-O7O3MCCtgcL6EfdsouoXt8Irbu3VSq.png" alt="Arch Linux">
+            <span>Arch Linux</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/77597-tester-aKISTYJ1GwsQvaDjFNFGrvK7fkffvc.png" alt="Testing">
-            </div>
-            <h3>Testing</h3>
-            <p>Tests et assurance qualité pour des applications robustes</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3442_c_emoji-aKfx8aurtHNDuFZjoGp7Ne1IQ3RAfX.png" alt=".NET">
+            <span>.NET</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/78599-management-9q00bWhgCBNM8q0i6f69Z6n5E8xkNq.png" alt="Gestion">
-            </div>
-            <h3>Gestion</h3>
-            <p>Coordination et gestion efficace des projets numériques</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4601_github-kfI3epDaRmcmHJpY2Rg5h64UXVDgDm.png" alt="GitHub">
+            <span>GitHub</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/97020-owner-pXCGdRVse9F7ueqOeDd5ZGE5eu3r58.png" alt="Leadership">
-            </div>
-            <h3>Leadership</h3>
-            <p>Direction d'équipes et prise de décisions stratégiques</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3046_MySQL-4DlsjrQTxUJaMFhGGKAUUN5aydFcpa.png" alt="MySQL">
+            <span>MySQL</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/93084-booosters-ar9vfwtC8HONpZudHcs0KmoXHTHiDt.png" alt="Innovation">
-            </div>
-            <h3>Innovation</h3>
-            <p>Développement de solutions créatives et avant-gardistes</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1736_jetBrains-jWhpCC1yuGQIaR6YSCrV4W9L5By4GP.png" alt="JetBrains">
+            <span>JetBrains</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/91974-bot-eFPQmMEmJul09J6hoIpdX3AJdndWFh.png" alt="Bots">
-            </div>
-            <h3>Bots & IA</h3>
-            <p>Création de bots et intégration de solutions d'IA</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7219_IntelliJ-qwLlJpa95tKWaOILZHbSLBd635u7dH.png" alt="IntelliJ">
+            <span>IntelliJ</span>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14911-creator-Cu4hvmvi0HNCwS8Qz4jNbprO64eMki.png" alt="Création">
-            </div>
-            <h3>Création</h3>
-            <p>Production de contenu numérique engageant et professionnel</p>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9136_js-xvuVLEPzw2NFCyxX70rysOE3MOCUPz.png" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1843_npm_logo-UGRIjAAz5KL7AfnEXk6P9KZkTunPk5.png" alt="npm">
+            <span>npm</span>
+          </div>
+          <div class="toolkit-item">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8584-typescript-1rTwm3exqPBKJf9YbImHh4ZTnUqS8k.png" alt="TypeScript">
+            <span>TypeScript</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="featured-projects" class="featured-projects">
       <div class="container">
         <div class="section-header">
-          <h2>Mes projets</h2>
+          <h2>Projets en vedette</h2>
           <div class="separator"></div>
         </div>
         <div class="projects-grid">
@@ -230,59 +275,7 @@
           </div>
         </div>
         <div class="projects-cta">
-          <a href="#" class="btn btn-secondary">Voir tous les projets</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2>Me contacter</h2>
-          <div class="separator"></div>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Restons en contact</h3>
-            <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question.</p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>email@example.com</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>France</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-globe"></i>
-                <span>m0mlux.github.io</span>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-            </div>
-          </div>
-          <div class="contact-form">
-            <form>
-              <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
-          </div>
+          <a href="projects.html" class="btn btn-secondary">Voir tous les projets</a>
         </div>
       </div>
     </section>
@@ -293,19 +286,27 @@
       <div class="footer-content">
         <div class="footer-logo">M0MLUX</div>
         <div class="footer-links">
-          <a href="#home">Accueil</a>
-          <a href="#about">À propos</a>
-          <a href="#skills">Compétences</a>
-          <a href="#projects">Projets</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="projects.html">Projets</a>
+          <a href="shop.html">Boutique</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+        </div>
         <p>&copy; 2024 M0mlux. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/particles-config.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
