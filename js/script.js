@@ -185,8 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   languageOptions.forEach((option) => {
     option.addEventListener("click", () => {
+      // Set active class
+      languageOptions.forEach((opt) => opt.classList.remove("active"))
+      option.classList.add("active")
+
       const lang = option.dataset.lang
-      const currentPage = window.location.pathname.split("/").pop()
+      const currentPage = window.location.pathname.split("/").pop() || "index.html"
 
       // Save language preference
       localStorage.setItem("language", lang)
@@ -207,4 +211,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
+})
+
+// Check for saved language preference on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLanguage = localStorage.getItem("language")
+  if (savedLanguage) {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html"
+    const isEnglishPage = currentPage.includes("-en")
+
+    if (savedLanguage === "en" && !isEnglishPage) {
+      const baseName = currentPage.replace(".html", "")
+      window.location.href = `${baseName}-en.html`
+    } else if (savedLanguage === "fr" && isEnglishPage) {
+      const frPage = currentPage.replace("-en.html", ".html")
+      window.location.href = frPage
+    }
+
+    // Update active class
+    document.querySelectorAll(".language-options span").forEach((option) => {
+      if (option.dataset.lang === savedLanguage) {
+        option.classList.add("active")
+      } else {
+        option.classList.remove("active")
+      }
+    })
+  }
 })
